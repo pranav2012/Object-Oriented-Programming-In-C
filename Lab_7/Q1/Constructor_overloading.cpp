@@ -7,7 +7,7 @@ class addition{
         int sum;
         double sum1;
         void getsum(double sum, string a){
-            cout<<"\nsum of "<<a<<" is: "<<sum;
+            cout<<"sum of "<<a<<" is: "<<sum<<"\n";
         }
     public:
         addition(double var1, double var2){

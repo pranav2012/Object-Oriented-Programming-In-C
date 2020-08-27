@@ -1,38 +1,39 @@
-#include <iostream> 
-using namespace std; 
+#include <iostream>
+using namespace std;
+ 
+class Distance {
+   private:
+      int feet;         
+      int inches;          
+      
+   public:
+      Distance() {
+         feet = 0;
+         inches = 0;
+      }
+      Distance(int f, int i) {
+         feet = f;
+         inches = i;
+      }
+      friend ostream &operator<<( ostream &output, const Distance &D ) { 
+         output << "F : " << D.feet << " I : " << D.inches;
+         return output;            
+      }
 
-class Complex 
-{ 
-private: 
-	int real, imag; 
-public: 
-	Complex(int r = 0, int i =0) 
-	{ real = r; imag = i; } 
-	friend ostream & operator << (ostream &out, const Complex &c); 
-	friend istream & operator >> (istream &in, Complex &c); 
-}; 
+      friend istream &operator>>( istream  &input, Distance &D ) { 
+         input >> D.feet >> D.inches;
+         return input;            
+      }
+};
 
-ostream & operator << (ostream &out, const Complex &c) 
-{ 
-	out << c.real; 
-	out << "+i" << c.imag << endl; 
-	return out; 
-} 
+int main() {
+   Distance D1(11, 10), D2(5, 11), D3;
 
-istream & operator >> (istream &in, Complex &c) 
-{ 
-	cout << "Enter Real Part "; 
-	in >> c.real; 
-	cout << "Enter Imaginary Part "; 
-	in >> c.imag; 
-	return in; 
-} 
+   cout << "Enter the value of object : " << endl;
+   cin >> D3;
+   cout << "First Distance : " << D1 << endl;
+   cout << "Second Distance :" << D2 << endl;
+   cout << "Third Distance :" << D3 << endl;
 
-int main() 
-{ 
-Complex c1; 
-cin >> c1; 
-cout << "The complex object is "; 
-cout << c1; 
-return 0; 
+   return 0;
 }

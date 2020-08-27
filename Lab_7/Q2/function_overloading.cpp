@@ -7,15 +7,15 @@ int main()
 {
 	int s,l,b;
 	float bs,ht;
-	cout<<"Enter side of a square:";
+	cout<<"Enter side of a square: ";
 	cin>>s;
-	cout<<"Enter length and breadth of rectangle:";
+	cout<<"Enter length and breadth of rectangle: ";
 	cin>>l>>b;
-	cout<<"Enter base and height of triangle:";
+	cout<<"Enter base and height of triangle: ";
 	cin>>bs>>ht;
-	cout<<"Area of square is"<<area(s);
+	cout<<"Area of square is "<<area(s);
 	cout<<"\nArea of rectangle is "<<area(l,b);
-    cout<<"\nArea of triangle is "<<area(bs,ht);
+    cout<<"\nArea of triangle is "<<area(bs,ht)<<"\n";
 }
 int area(int s)
 {
