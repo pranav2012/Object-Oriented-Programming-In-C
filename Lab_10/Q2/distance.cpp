@@ -12,7 +12,7 @@ public:
     }
     void display(){
         cout << "\nThe distance is:";
-        cout << meter << " meters and " << centimetre << " centimeter";
+        cout << meter << " meters and " << centimetre << " centimeter\n";
     }
     friend void sum(DM, DB);
 };
@@ -27,7 +27,7 @@ public:
     }
     void display(){
         cout << "\nThe distance is:";
-        cout << feet << " feet and " << inch << " inch";
+        cout << feet << " feet and " << inch << " inch\n";
     }
     friend void add(DM, DB);
 };
